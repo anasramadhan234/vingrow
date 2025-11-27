@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Program Public Speaking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .content {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .text-section {
+      flex: 1;
+    }
+
+    .text-section h3 {
+      margin: 0 0 8px;
+    }
+
+    .text-section p, .text-section li {
+      line-height: 1.6;
+    }
+
+    .image-section img {
+      width: 320px;
+      border-radius: 10px;
+    }
+
+    .info {
+      margin-top: 20px;
+      line-height: 1.8;
+    }
+
+    .info span {
+      display: block;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 10px 28px;
+      background: #7418AD;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: #b463d1;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-section img {
+        width: 80%;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Program Public Speaking</h1>
+
+    <div class="content">
+
+      <div class="text-section">
+        <h3>Penjelasan lengkap :</h3>
+        <p>Program ini dirancang khusus untuk pemula yang ingin mengatasi rasa gugup dan membangun fondasi keterampilan public speaking yang kuat. Dalam sesi yang padat dan interaktif, Anda akan mempelajari teknik-teknik praktis untuk berbicara dengan percaya diri, terstruktur, dan menarik di depan audiens.</p>
+
+        <h3>Metode Pelatihan :</h3>
+        <ul>
+          <li>Praktik Intensif: Lebih dari 50% waktu dialokasikan untuk latihan dan simulasi presentasi singkat.</li>
+          <li>Studi Kasus & Contoh: Pembahasan contoh-contoh public speaker yang sukses.</li>
+          <li>Sesi Tanya Jawab (Q&A): Ruang untuk membahas tantangan spesifik dari peserta.</li>
+          <li>Feedback Personal: Umpan balik langsung dari instruktur.</li>
+        </ul>
+
+        <div class="info">
+          <span>💰 Harga: <strong>Rp 350.000</strong> (Dibayar ketika pendaftaran)</span>
+          <span>📅 Total Pertemuan: <strong>4 Minggu (4 Sesi)</strong></span>
+          <span>⏱️ Durasi Per Sesi: <strong>1 Jam</strong></span>
+        </div>
+
+        <div class="buttons">
+          <button class="btn" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSclpFNgwnnJCj3dDWTixzDZH8haR_TP9K-ED1qh-ZhRj8-ojQ/viewform?usp=dialog'">Mulai</button>
+          <button class="btn secondary" onclick="window.location.href='index.html'">Kembali</button>
+        </div>
+      </div>
+
+      <div class="image-section">
+        <img src="public_speaking.png" alt="Ilustrasi Public Speaking">
+      </div>
+
+    </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

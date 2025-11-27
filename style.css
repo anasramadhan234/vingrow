@@ -1,0 +1,547 @@
+:root{
+  --primary:#7418AD;
+  --bg:#f8f9fb;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --radius:14px;
+}
+
+/* reset / box model */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* CONTAINER
+   - max-width diperbesar agar layout tidak terlalu sempit
+   - padding horizontal konsisten (mirip Figma)
+*/
+.container{
+  max-width:1280px;      /* lebih lebar dibanding sebelumnya */
+  margin:0 auto;
+  padding-left:56px;     /* jarak kiri kanan yang nyaman pada layar desktop */
+  padding-right:56px;
+}
+
+/* section wrapper (optional, gunakan untuk section besar agar spacing konsisten) */
+.page-section{
+  width:100%;
+  padding-top:48px;
+  padding-bottom:48px;
+}
+
+/* Header / Navbar */
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.site-header{
+  background:white;
+  box-shadow:0 1px 0 rgba(0,0,0,0.03);
+  position:sticky; /* biarkan sticky jika prefer modern; ganti ke 'static' jika ingin non-sticky */
+  top:0;
+  z-index:40;
+  padding : 12px 10px;
+}
+.nav a{margin-left:18px;text-decoration:none;color:#111;padding:6px 8px;border-radius:8px}
+.nav a.active{color:var(--primary);font-weight:600}
+.cta{background:var(--primary);color:#fff;padding:6px 14px;border-radius:12px;text-decoration:none}
+
+/* HERO */
+.hero{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  padding-top:64px;
+  padding-bottom:64px;
+}
+.hero-left{flex:1;max-width:720px}
+.hero-right{flex:1;text-align:right}
+.hero h1{font-size:44px;line-height:1.03;margin:0 0 16px;font-weight:700}
+.lead{color:var(--muted);margin:0 0 18px;font-size:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-outline{border:1px solid rgba(0,0,0,0.08);background:#a8c4fd;color:#111}
+.hero-image{max-width:440px; width:100%; height:auto; display:block; margin-left:auto}
+
+/* --- Keunggulan Section --- */
+.keunggulan-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.keunggulan-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.keunggulan-image img {
+  width: 150%;
+  max-width: 480px;
+}
+
+/* Text bagian kanan */
+.keunggulan-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.keunggulan-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* List */
+.keunggulan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.keunggulan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Icon bulat */
+.icon-circle {
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+  border-radius: 50%;
+  background: #eee9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle img {
+  width: 28px;
+}
+
+/* Judul + paragraf */
+.keunggulan-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.keunggulan-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .keunggulan-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .keunggulan-item {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+/* Cards (pilihan jalur) */
+.cards{display:flex;gap:18px;margin-top:16px}
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:22px;
+  flex:1;
+  box-shadow:0 8px 24px rgba(16,24,40,0.06);
+  border:1px solid rgba(16,24,40,0.03);
+}
+.card h3{margin:6px 0 8px}
+.card-icon{font-size:28px}
+
+/* Signup / flowchart section */
+.signup{display:flex;gap:0px;background:white;margin-top: 50px;align-items:center}
+.signup-left{margin:65px;flex:1}
+.signup-right{margin:30px;margin-right:110px;flex:1}
+.flowchart img{max-width:520px; width:100%; height:auto}
+
+/* Features */
+.features-grid{display:flex;gap:18px}
+.feature{background:var(--card);padding:18px;border-radius:12px;flex:1;box-shadow:0 8px 24px rgba(16,24,40,0.05)}
+
+/* Skills grid */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:18px;
+}
+.skill-card{
+  display:block;
+  background:linear-gradient(180deg, #fff, #fbfdff);
+  padding:18px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#111;
+  box-shadow:0 6px 18px rgba(16,24,40,0.04);
+  text-align:center;
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Footer */
+.site-footer{text-align:center;padding:28px 0;background:white;margin-top:40px;}
+
+/* Learning path page */
+.page-learning .page-title{font-size:28px;text-align:center;margin:32px 0}
+.lp-card{
+  display:flex;
+  gap:28px;
+  background:var(--card);
+  padding:26px;
+  border-radius:16px;
+  box-shadow:0 14px 36px rgba(16,24,40,0.05);
+  align-items:center;
+  margin-bottom:22px;
+}
+.lp-card.reverse{flex-direction:row-reverse}
+.lp-card-body{flex:1}
+.lp-card-illustration img{max-width:320px; width:100%; height:auto}
+.muted{color:var(--muted)}
+
+/* Testimoni */
+.page-testimoni .page-title{font-size:28px;text-align:center;margin:36px 0}
+.testi-grid{display:flex;gap:18px;margin-bottom:22px}
+.testi-card{background:#f1f7ff;padding:16px;border-radius:12px;flex:1;box-shadow:0 8px 20px rgba(16,24,40,0.04)}
+.avatar{width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
+.video-section{display:flex;gap:18px;align-items:center}
+.video-thumb {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.video-thumb img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.video-thumb .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 16/9;
+  margin: 25px auto;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.hidden { display: none; }
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+.stats{display:flex;gap:12px}
+.stat{background:#fff;padding:18px;border-radius:12px;flex:1;text-align:center;box-shadow:0 8px 20px rgba(16,24,40,0.04)}
+
+/* About */
+.about-hero{display:flex;gap:28px;align-items:center;margin:28px 0}
+.about-illustration img{max-width:560px; width:100%; height:auto; margin-left:50px}
+.skill-list{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.skill-card{background:#f7f9fd;padding:12px;border-radius:12px}
+.contact{display:flex;gap:18px;margin-top:22px}
+.contact-form{flex:1;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(16,24,40,0.04)}
+.contact-info{flex:1}
+.contact-form form label{display:block;margin-bottom:12px}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px}
+
+/* Utilities */
+.hint{color:var(--muted);font-size:14px}
+/* --- Kategori Softskill --- */
+.kategori-section {
+  margin: 60px auto;
+}
+
+.kategori-section h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.kategori-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.kategori-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #eaf4ff;
+  padding: 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #dbe9ff;
+  transition: 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.kategori-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.kat-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: white;
+  padding: 10px;
+}
+
+.kat-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* --- MOBILE NAVBAR (Hamburger) --- */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media(max-width: 780px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-wrapper {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-wrapper.open {
+    display: block;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+    background: white;
+  }
+
+  .nav a {
+    margin-left: 0 !important;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav a.cta {
+    border-bottom: none;
+    align-self: flex-start;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+  }
+}
+
+/* Responsive */
+@media(max-width: 780px){
+  .kategori-grid {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+/* Responsive: kecilkan padding dan ubah grid supaya muat */
+@media(max-width:1200px){
+  .container{padding-left:40px;padding-right:40px}
+  .hero h1{font-size:40px}
+  .hero-image{max-width:380px}
+}
+@media(max-width:880px){
+  .container{padding-left:20px;padding-right:20px}
+  .hero{flex-direction:column;text-align:left;padding-top:36px;padding-bottom:36px}
+  .cards{flex-direction:column}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .lp-card{flex-direction:column}
+  .about-hero{flex-direction:column}
+  .testi-grid{flex-direction:column}
+  .contact{flex-direction:column}
+  .hero h1{font-size:28px}
+}
+@media(max-width:480px){
+  .container{padding-left:14px;padding-right:14px}
+  .skills-grid{grid-template-columns:1fr}
+}
+
+/* Skill List Layout */
+.skill-list {
+  margin-top: 40px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+}
+
+/* Card Style */
+.skill-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #EAF1FF;
+  padding: 22px 26px;
+  border-radius: 16px;
+}
+
+/* Icon */
+.skill-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+/* Title + Text */
+.skill-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.skill-info p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}
+/* --- Testimoni Video New Layout --- */
+
+.testimoni-video-wrapper {
+  margin-top: 40px;
+}
+
+.video-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: #f4f7ff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.video-box {
+  flex: 1;
+}
+
+.video-text {
+  flex: 1;
+}
+
+.video-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.video-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Stats bawah */
+.testi-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  gap: 20px;
+}
+
+.stat-box {
+  flex: 1;
+  background: #f4f7ff;
+  text-align: center;
+  padding: 22px 10px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.stat-box h3 {
+  margin: 0;
+  font-size: 26px;
+  color: #7418AD;
+  font-weight: 700;
+}
+
+.stat-box p {
+  margin: 6px 0 0;
+  color: #555;
+}
+
+/* Responsive */
+@media(max-width: 850px){
+  .video-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testi-stats {
+    flex-direction: column;
+  }
+}
+
+/* --- SOCIAL ICONS: ABOUT PAGE --- */
+.contact-info a {
+  display: inline-block;
+  margin-right: 28px;      /* jarak antar logo */
+}
+
+.contact-info img {
+  width: 40px;             /* kecilkan ikon */
+  height: 40px;
+  object-fit: contain;
+  transition: 0.2s ease;
+}
+
+.contact-info img:hover {
+  transform: scale(1.08);
+}
